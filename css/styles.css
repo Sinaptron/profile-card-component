@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*{   
+    --darkCyan: hsl(185, 75%, 39%);
+    --veryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+    --darkgrayishBlue: hsl(227, 10%, 46%);
+    --darkGray: hsl(0, 0%, 59%);
+    --Kumbh-family: 'Kumbh Sans', sans-serif;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--Kumbh-family);
+    font-size: 18px;
+    background-color: var(--darkCyan);
+    background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat , no-repeat;
+    background-position: right 51vw bottom 20vh, left 45vw top 50vh;
+}
+
+.contenido {
+    margin: 180px auto 60px;
+    width: 325px;
+    height: 375px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.contenido:hover{
+    cursor: pointer;
+    box-shadow:  5px 5px 5px  var(--veryDarkDesaturatedBlue);
+    transition: 100ms;
+}
+
+.fondo_tarjeta {
+    background-image: url(../images/bg-pattern-card.svg);
+    height: 135px;
+}
+
+.perfil {
+    position: absolute;
+    top: 80px;
+    left: 35%;
+    border: 5px solid white;
+    border-radius: 45%;
+    overflow: hidden;
+    height: 95px;
+}
+
+.perfil img {
+transition: all 2.3s ease-in-out; 
+}
+
+.perfil img:hover {
+  cursor: pointer;
+  transform: rotateY(360deg);
+}
+
+.perfil_datos {
+    box-sizing: border-box;
+    text-align: center;
+    background-color: white;
+    height: 150px;
+    padding: 75px;
+}
+
+.perfil_nombre {
+    font-weight: 720;
+    color: var(--veryDarkDesaturatedBlue);
+}
+
+.perfil_nombre:hover{
+    cursor: pointer;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px green, 0 0 5px darkgreen;
+}
+
+.perfil_edad, .direccion {
+    color: var(--darkGray);
+}
+
+.direccion {
+    margin-top: 12px;
+    font-size: 1.0em;
+}
+
+.contenido_estatus {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90px;
+    background-color: white;
+    border-top: 2px solid var(--darkGray);    
+}
+
+.estadistica {
+    text-align: center;
+}
+.cantidad {
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--veryDarkDesaturatedBlue);
+}
+
+.seguidores {
+    font-size: 0.8em;
+    color: var(--darkGray);
+    letter-spacing: 3px;
+}
+
+.piedepagina {
+    text-align: center;
+    font-size: 1.0em;
+}
+
+/* pantalas de 375px hacia abajo */
+@media (max-width: 375px) {
+
+.perfil_datos {
+    box-sizing: border-box;
+    text-align: center;
+    background-color: lightgray;
+      }
+ .contenido_estatus {
+    background-color: lightgray; 
+     }
+}
